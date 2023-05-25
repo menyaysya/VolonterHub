@@ -1,52 +1,75 @@
-import {makeStyles} from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles({
-  insideFormWrapper: {
+  form: {
+    marginTop:"110px",
+    marginBottom:"20%",
     display: "flex",
-    flexWrap: "wrap",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "16px",
+    backgroundColor: "rgba(58, 170, 231, 0.3)",
+    backdropFilter: "blur(10px)",
+    borderRadius: "8px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
   },
-  datePickerLabel: {
-    "& $notchedOutline": {
-      backgroundColor: "white",
-    },
-    "&.MuiFormLabel-root": {
-      "&.MuiInputLabel-root": {
-        "&.Mui-focused": {
-          color: "rgba(120, 63, 214, 0.5)",
-        },
-      },
-      position: "relative",
-      display: "block",
-      margin: "0 0 -10px -10px",
-      fontSize: 18,
-      fontWeight: 500,
-    },
+  heading: {
+    marginBottom: "16px",
   },
-  registrationForm: {
-    maxWidth: 800,
-    margin: "0 auto",
+  inputContainer: {
     display: "flex",
-    flexWrap: "wrap",
-    background: "linear-gradient(180deg, rgba(128, 132, 133, 0.8) -74.09%, rgba(158, 136, 171, 0) 86%)",
-    border: "1px solid rgba(81, 95, 217, 0.5)",
-    borderRadius: "15px",
-    padding: "35px 35px 35px 45px",
-    "& .MuiFormControl-root": {
-      width: 350,
-      margin: 25,
-    },
+    gap: "8px",
+    marginBottom: "16px",
   },
-  submitButton: {
-    "&.MuiButtonBase-root": {
-      margin: "0 auto",
-      backgroundColor: "#6C73BB",
-      borderRadius: 15,
-      width: 200,
-      height: 50,
-      "&:hover": {
-        backgroundColor: "#6C73BB",
-      },
-    },
+  input: {
+    width: "100%",
+
+  },
+  phoneInputContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    marginBottom: "16px",
+  },
+  phoneInputPrepend: {
+    background: "#f5f5f5",
+    display: "flex",
+    alignItems: "center",
+    padding: "4px 8px",
+    borderRadius: "4px 0 0 4px",
+  },
+  phoneInputText: {
+    color: "#555",
+  },
+  phoneInput: {
+    flex: 1,
+    padding: "5px",
+    borderRadius: "0 9px 9px 0",
+    border: "1px solid #555",
+    width: "95%",
+    height:"4vh",
+    background: "rgba(0, 0, 0, 0)",
+
+
+
+  },
+  label: {
+    fontSize: "14px",
+    color: "#555",
+    marginBottom: "4px",
+  },
+  accountTextContainer: {
+    marginTop: "16px",
+    textAlign: "center",
+  },
+  accountText: {
+    fontSize: "14px",
+    color: "#555",
+  },
+  loginButton: {
+    marginLeft: "4px",
+    color: "#007bff",
+    textDecoration: "none",
+    cursor: "pointer",
   },
 });
-"";
