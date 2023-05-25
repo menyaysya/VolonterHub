@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="fixed" className={classes.header}>
+    <AppBar  className={classes.header}>
       <Toolbar className={classes.toolbar}>
         <div className={classes.wrapLogo}>
           <Typography
@@ -33,7 +33,7 @@ const Header = () => {
             href="#"
             className={classes.navbarBrand}
           >
-                        VOLONTER HUB
+                        VOLUNTEER HUB
           </Typography>
           <Button
             component="button"
