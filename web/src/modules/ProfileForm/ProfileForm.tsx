@@ -50,77 +50,37 @@ export const ProfileForm: FC = () => {
     setImage(`${payload}?${Math.random()}`);
   };
 
-  useLayoutEffect(() => {
-    const fetchData = async () => {
-      const {payload} = await dispatch(fetchMe()); 
-      if(!payload || typeof payload === "string"){
-        return;
-      }
-      reset({
-        username: payload?.username,
-        firstName: payload?.firstName,
-        lastName: payload?.lastName,
-        email: payload?.email,
-        phoneNumber: payload?.phoneNumber,
-        birthday: payload?.birthday,
-        registrationDate: payload?.registrationDate,
-      });
-      setImage(`https://practiflybucket.s3.eu-north-1.amazonaws.com/${payload?.id}`);
-    };
-    fetchData().catch((e) => {
-      return e.message;
-    });
-  }, []);
+  // useLayoutEffect(() => {
+  //   const fetchData = async () => {
+  //     const {payload} = await dispatch(fetchMe());
+  //     if(!payload || typeof payload === "string"){
+  //       return;
+  //     }
+  //     reset({
+  //       username: payload?.username,
+  //       firstName: payload?.firstName,
+  //       lastName: payload?.lastName,
+  //       email: payload?.email,
+  //       phoneNumber: payload?.phoneNumber,
+  //       birthday: payload?.birthday,
+  //       registrationDate: payload?.registrationDate,
+  //     });
+  //     setImage(`https://practiflybucket.s3.eu-north-1.amazonaws.com/${payload?.id}`);
+  //   };
+  //   fetchData().catch((e) => {
+  //     return e.message;
+  //   });
+  // }, []);
 
   return (
     <>
       <Box className={styles.rootForm}>
-        <Box className={styles.infoBlock}>
-          <MyInput
-            outsideLabel="Логін"
-            width={300}
-            name="username"
-            disabled
-            register={register}/>
-          <MyInput
-            outsideLabel="Ім'я"
-            width={300}
-            name="firstName"
-            register={register}/>
-          <MyInput
-            outsideLabel="Прізвище"
-            width={300}
-            name="lastName"
-            register={register}/>
-          <MyInput
-            outsideLabel="Email"
-            width={310}
-            name="email"
-            register={register}/>
-          <MyInput
-            outsideLabel="Номер телефону"
-            width={310}
-            name="phoneNumber"
-            register={register}/>
-          <MyInput
-            outsideLabel="Дата народження"
-            width={310}
-            register={register}
-            name="birthday"
-            type="date"/>
-          <MyInput
-            outsideLabel="Пароль"
-            type="password"
-            width={310}
-            name="password"
-            register={register}/>
-        </Box>
-        <Box className={styles.rightBlock}>
-          <Typography>Фото профіля</Typography>
-          <Box className={styles.imageWrapper}>
+        <Box >
+
+          <Box >
             <label htmlFor="filePhoto">
               <Avatar
-                sx={{ borderRadius: 0, width: 250, height: 200 }}
+                sx={{ borderRadius: 100, width: "100%", height: "100%" }}
                 src={image}
               />
             </label>
@@ -133,16 +93,35 @@ export const ProfileForm: FC = () => {
               id="filePhoto"
             />
           </Box>
-          <Box className={styles.registrationDate}>
-            <Typography style={{color: "#808485"}}>Дата реєстрації</Typography>
-            <MyInput
-              width={200}
-              register={register}
-              name="registrationDate"
-              type="date"/>
-          </Box>
+        </Box>
+        <Box className={styles.inputBlock}>
+          <MyInput
+            outsideLabel="Логін"
+            name="username"
+            disabled
+            register={register}/>
+          <MyInput
+            outsideLabel="Повне імʼя"
+            name="fullName"
+            register={register}/>
+
+          <MyInput
+            outsideLabel="Email"
+            name="email"
+            register={register}/>
+          <MyInput
+            outsideLabel="Номер телефону"
+            name="phoneNumber"
+            register={register}/>
+          <MyInput
+            outsideLabel="Дата народження"
+            register={register}
+            name="birthday"
+            type="date"/>
+
         </Box>
       </Box>
+
     </>
   );
 };

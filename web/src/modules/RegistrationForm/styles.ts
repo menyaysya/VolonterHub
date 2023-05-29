@@ -49,9 +49,6 @@ export const useStyles = makeStyles({
     width: "95%",
     height:"4vh",
     background: "rgba(0, 0, 0, 0)",
-
-
-
   },
   label: {
     fontSize: "14px",

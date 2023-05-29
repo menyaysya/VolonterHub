@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "20px 10px",
+    padding: "10px 10px",
+
   },
   wrapLogo: {
     display: "flex",
@@ -38,13 +39,13 @@ const useStyles = makeStyles((theme) => ({
   },
   navItem: {
     "&:not(:last-child)": {
-      marginRight: "20px",
+      marginRight:" -10px ",
     },
   },
   navLink: {
     color: "#fff",
     textDecoration: "none",
-    fontSize: "18px",
+    fontSize: "16px",
     "&:hover": {
       color: "#fff",
     },

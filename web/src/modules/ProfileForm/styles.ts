@@ -2,19 +2,19 @@ import {makeStyles} from "@mui/styles";
 
 export const useStyles = makeStyles({
   rootForm:{
-    marginTop: "20px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
-    borderRadius: "10px",
+    marginTop:"110px",
+    marginBottom:"20%",
     display: "flex",
-    maxWidth: 1400,
-    margin: "0 auto",
-    minHeight: 450,
-    padding: "20px 20px 10px",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "16px",
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    backdropFilter: "blur(10px)",
+    borderRadius: "8px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
   },
-  infoBlock: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
+  inputBlock:{
+    width: "100%",
   },
   imageWrapper: {
     padding: 20,
@@ -30,14 +30,6 @@ export const useStyles = makeStyles({
       flexDirection: "row",
     },
   },
-  rightBlock:{
-    padding: "0 20px",
-  },
-  registrationDate:{
-    marginTop: 20,
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-around",
-  },
+
+
 });
